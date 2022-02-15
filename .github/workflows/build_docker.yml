@@ -19,7 +19,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: xinb/alist
+          images: khdkr/alist
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
@@ -35,7 +35,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: xhofe
+          username: khdkr
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push
         id: docker_build
